@@ -6,7 +6,7 @@ s3 = boto3.client('s3')
 dynamodb = boto3.resource('dynamodb')
 bucket_name = 'mh-cleaning'
 table_name = 'mh-cleaning'
-bot = telebot.TeleBot(bot_token)
+
 
 def lambda_handler(event, context):
     try:
