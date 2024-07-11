@@ -5,7 +5,7 @@ import telebot
 
 s3 = boto3.client('s3')
 bucket_name = 'mh-cleaning'
-bot_token = 'SEU_BOT_TOKEN'
+bot_token = '7448336234:AAFYG24XDiM-wa3YDwhw1RKdd0EBhp19gJE'
 bot = telebot.TeleBot(bot_token)
 
 def lambda_handler(event, context):
