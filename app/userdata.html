@@ -99,5 +99,31 @@
             <img src="img/logo_plasma.png" alt="Logo PlasmaID">
         </div>
     </div>
+
+    <script>
+        // Logout automático após 30 minutos de inatividade
+        let inactivityTime = function () {
+            let time;
+            window.onload = resetTimer;
+            window.onmousemove = resetTimer;
+            window.onmousedown = resetTimer; // captura eventos de toque no mobile
+            window.ontouchstart = resetTimer;
+            window.ontouchmove = resetTimer;
+            window.onclick = resetTimer;     // captura cliques
+            window.onkeypress = resetTimer;  // captura teclas
+
+            function logout() {
+                alert("Você foi desconectado por inatividade.");
+                window.location.href = 'index.html';
+            }
+
+            function resetTimer() {
+                clearTimeout(time);
+                time = setTimeout(logout, 1800000);  // 30 minutos em milissegundos
+            }
+        };
+
+        inactivityTime();
+    </script>
 </body>
 </html>
